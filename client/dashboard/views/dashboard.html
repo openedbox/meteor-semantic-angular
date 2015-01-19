@@ -1,0 +1,27 @@
+<template name="dashboard.html">
+    {{ > navbar}}
+
+    <div class="container">
+    	<div class="pageHeader">
+			<div class="segment">
+				<h3 class="ui dividing header">
+  					<i class="large dashboard icon"></i>
+  					<div class="content">
+    					CI Monitor
+    				<div class="sub header">Jenkins Job Monitor Example</div>
+  					</div>
+				</h3>
+			</div>
+		</div>
+
+		<div class="ui center aligned [[getBuildStatusColor(build.building,build.result)]] inverted  segment" ng-repeat="build in builds[0].value">
+			<h3>
+				<a href="[[build.jobUrl]]" target="_blank" style="color:white">[[build.name]]</a> 
+				# 
+				<a href="[[build.buildUrl]]" target="_blank" style="color:white">[[build.number]]</a> 
+				[[getBuildStatusInfo(build.building,build.result)]]
+			</h3>
+		</div>
+    </div>
+	
+</template>

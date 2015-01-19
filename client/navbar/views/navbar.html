@@ -1,0 +1,29 @@
+<template name="navbar">
+    <header>
+    	<div class="ui fixed pointing menu">
+    	<div class="item"><b>Demo</b></div>
+        <a class="item [[dashboard]]" href="/dashboard">
+            <i class="dashboard icon"></i> CI Monitor
+        </a>
+        <a class="item [[cqrs]] disabled" style="display:none" href="/cqrs">
+            <i class="feed icon"></i> CQRS
+        </a>
+        <a class="item [[analysis]] disabled" href="">
+            <i class="bar chart icon"></i> Data Analysis
+        </a>
+
+
+        <div class="right menu">
+            <div class="ui top pointing dropdown link item">
+                <i class="user icon"></i>admin<i class="dropdown icon"></i>
+
+                <div class="menu ui visible horizontal flip">
+                    <a href="/changepwd.html" class="item"><i class="edit icon"></i>Change Password</a>
+                    <a href="/useredit.html" class="item"><i class="edit icon"></i>Profile</a>
+                    <a href="/logout.html" class="item"><i class="close icon"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	</header>
+</template>
